@@ -119,6 +119,7 @@
     <Compile Include="DataAttributeShouldBeUsedOnATheoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicMethodShouldBeMarkedAsTestTests.cs" />
+    <Compile Include="TestBaseClassWithTestMethodsShouldBeAbstractTests.cs" />
     <Compile Include="TestClassMustBePublicTests.cs" />
     <Compile Include="TestMethodMustNotHaveMultipleFactAttributesTests.cs" />
     <Compile Include="TestMethodShouldNotBeSkippedTests.cs" />

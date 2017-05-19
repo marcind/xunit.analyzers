@@ -94,6 +94,12 @@ namespace Xunit.Analyzers
                 "MemberData should use nameof operator to reference member '{0}' on type '{1}'.",
                 Categories.Usage, DiagnosticSeverity.Warning, isEnabledByDefault: true);
 
+            internal static DiagnosticDescriptor X1015_TestBaseClassShouldBeAbstract { get; } = new DiagnosticDescriptor("xUnit1015",
+                "Base classes with test methods should be abstract",
+                "Base class '{0}' has test methods and should be abstract",
+                Categories.Usage, DiagnosticSeverity.Warning, isEnabledByDefault: true,
+                description: "Base classes with test methods should be abstract. Otherwise the test method will be executed multiple times, once for each concrete type in the class hierarchy.");
+
             internal static DiagnosticDescriptor X2000_AssertEqualLiteralValueShouldBeFirst { get; } = new DiagnosticDescriptor("xUnit2000",
                 "Expected value should be first",
                 "The literal or constant value {0} should be the first argument in the call to '{1}' in method '{2}' on type '{3}'.",

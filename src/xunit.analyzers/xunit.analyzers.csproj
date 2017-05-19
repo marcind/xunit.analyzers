@@ -47,6 +47,7 @@
     <Compile Include="AssertSameShouldNotBeCalledOnValueTypes.cs" />
     <Compile Include="CodeActions\UseDifferentMethodCodeAction.cs" />
     <Compile Include="FixProviders\ConvertToFactFix.cs" />
+    <Compile Include="FixProviders\MakeAbstract.cs" />
     <Compile Include="MemberDataShouldUseNameOfOperatorFixer.cs" />
     <Compile Include="CodeActions\ConvertAttributeCodeAction.cs" />
     <Compile Include="CodeActions\RemoveAttributesOfTypeCodeAction.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="InlineDataMustMatchTheoryParameters.cs" />
     <Compile Include="FactMethodShouldNotHaveTestData.cs" />
     <Compile Include="PublicMethodShouldBeMarkedAsTestFixer.cs" />
+    <Compile Include="TestBaseClassWithTestMethodsShouldBeAbstract.cs" />
     <Compile Include="TestMethodShouldNotBeSkippedFixer.cs" />
     <Compile Include="FactMethodShouldNotHaveTestDataFixer.cs" />
     <Compile Include="TheoryMethodShouldHaveParameters.cs" />

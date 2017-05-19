@@ -28,6 +28,14 @@ namespace Xunit.Analyzers
             return attributes.Any(a => attributeType.IsAssignableFrom(a.AttributeClass, exactMatch));
         }
 
+        internal static bool ContainsTestMethods(this ClassDeclarationSyntax @class, SemanticModel semanticModel, INamedTypeSymbol factType)
+        {
+            return @class.Members
+                        .Where(n => n.IsKind(SyntaxKind.MethodDeclaration))
+                        .Cast<MethodDeclarationSyntax>()
+                        .Any(method => method.AttributeLists.ContainsAttributeType(semanticModel, factType));
+        }
+
         internal static bool IsAssignableFrom(this ITypeSymbol targetType, ITypeSymbol sourceType, bool exactMatch = false)
         {
             if (targetType != null)
